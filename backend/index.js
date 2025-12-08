@@ -1,0 +1,11 @@
+const express = require('express');
+const cors = require('cors');
+require('dotenv').config();
+const app = express();
+app.use(cors());
+app.use(express.json());
+const port = process.env.PORT || 4000;
+const applicationsRouter = require('./routes/applications');
+app.use('/api/applications', applicationsRouter);
+app.get('/health', (req, res) => res.json({ status: 'ok' }));
+app.listen(port, () => console.log(`Backend on ${port}`));

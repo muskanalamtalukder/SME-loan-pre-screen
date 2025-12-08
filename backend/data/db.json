@@ -1,0 +1,215 @@
+{
+  "applications": [
+    {
+      "id": "8TeknSZvvVFCWUgdUNUgP",
+      "businessName": "laxmi",
+      "turnover": 200000,
+      "investment": 36546,
+      "classification": "Micro",
+      "docs": {
+        "kyc": true,
+        "income": false,
+        "businessProof": false
+      },
+      "decision": {
+        "status": "Pending",
+        "reason": "Incomplete documents"
+      },
+      "createdAt": "2025-12-04T09:56:17.638Z"
+    },
+    {
+      "id": "y5fSNa6_ubApoo9bVZNJ4",
+      "businessName": "laxmi",
+      "turnover": 200000,
+      "investment": 36546,
+      "classification": "Micro",
+      "docs": {
+        "kyc": true,
+        "income": true,
+        "businessProof": true
+      },
+      "decision": {
+        "status": "Ready for Appraisal"
+      },
+      "createdAt": "2025-12-04T09:56:31.496Z"
+    },
+    {
+      "id": "OTGDOILfKTFSpk0bHs3UM",
+      "businessName": "laxmi",
+      "turnover": 200000,
+      "investment": 36546,
+      "classification": "Micro",
+      "docs": {
+        "kyc": true,
+        "income": true,
+        "businessProof": true
+      },
+      "decision": {
+        "status": "Ready for Appraisal"
+      },
+      "createdAt": "2025-12-04T09:56:39.106Z"
+    },
+    {
+      "id": "RnjyjJyVTZH8gUkF3_QYd",
+      "businessName": "laxmi",
+      "turnover": 20000,
+      "investment": 36546,
+      "classification": "Micro",
+      "docs": {
+        "kyc": true,
+        "income": true,
+        "businessProof": true
+      },
+      "decision": {
+        "status": "Ready for Appraisal"
+      },
+      "createdAt": "2025-12-04T09:57:03.976Z"
+    },
+    {
+      "id": "xmtmQCLIT1UgNToGFD8Gc",
+      "businessName": "laxmi",
+      "turnover": 20000,
+      "investment": 36546,
+      "classification": "Micro",
+      "docs": {
+        "kyc": true,
+        "income": true,
+        "businessProof": true
+      },
+      "decision": {
+        "status": "Ready for Appraisal"
+      },
+      "createdAt": "2025-12-04T09:57:05.223Z"
+    },
+    {
+      "id": "pI9m-C_2Ws2zbMK0Avbf6",
+      "businessName": "laxmi",
+      "turnover": 20000,
+      "investment": 36546,
+      "classification": "Micro",
+      "docs": {
+        "kyc": true,
+        "income": true,
+        "businessProof": true
+      },
+      "decision": {
+        "status": "Ready for Appraisal"
+      },
+      "createdAt": "2025-12-04T09:57:06.212Z"
+    },
+    {
+      "id": "P5Fvq0SK_sJ3GVaKaRcad",
+      "businessName": "laxmi",
+      "turnover": 20000,
+      "investment": 36546,
+      "classification": "Micro",
+      "docs": {
+        "kyc": true,
+        "income": true,
+        "businessProof": true
+      },
+      "decision": {
+        "status": "Ready for Appraisal"
+      },
+      "createdAt": "2025-12-04T09:57:06.979Z"
+    },
+    {
+      "id": "w8_A3B_4zlA8FUXVOXDP1",
+      "businessName": "muskan",
+      "turnover": 10000,
+      "investment": 100,
+      "classification": "Micro",
+      "docs": {
+        "kyc": true,
+        "income": true,
+        "businessProof": true
+      },
+      "decision": {
+        "status": "Ready for Appraisal"
+      },
+      "createdAt": "2025-12-04T10:00:24.543Z"
+    },
+    {
+      "id": "aDxmEs7DXVVV8xTDYQvnx",
+      "businessName": "muskan",
+      "turnover": 0,
+      "investment": 100,
+      "classification": "Micro",
+      "docs": {
+        "kyc": true,
+        "income": true,
+        "businessProof": true
+      },
+      "decision": {
+        "status": "Ready for Appraisal"
+      },
+      "createdAt": "2025-12-04T10:00:33.363Z"
+    },
+    {
+      "id": "SsOIGquRHI1mRkrn9ont7",
+      "businessName": "l",
+      "turnover": 500000000,
+      "investment": 56516621,
+      "classification": "Medium",
+      "docs": {
+        "kyc": true,
+        "income": true,
+        "businessProof": true
+      },
+      "decision": {
+        "status": "Ready for Appraisal"
+      },
+      "createdAt": "2025-12-04T10:01:10.855Z"
+    },
+    {
+      "id": "FmvMWlj1_zA3yPccFArFi",
+      "businessName": "muskan",
+      "turnover": 522000,
+      "investment": 45555,
+      "classification": "Micro",
+      "docs": {
+        "kyc": true,
+        "income": true,
+        "businessProof": false
+      },
+      "decision": {
+        "status": "Conditional Approval",
+        "reason": "Business proof missing"
+      },
+      "createdAt": "2025-12-04T11:05:24.279Z"
+    },
+    {
+      "id": "H11uTtVQ3-x9MHWsDhvNX",
+      "businessName": "n",
+      "turnover": 52,
+      "investment": 445,
+      "classification": "Micro",
+      "docs": {
+        "kyc": true,
+        "income": false,
+        "businessProof": true
+      },
+      "decision": {
+        "status": "On Hold",
+        "reason": "Income proof missing"
+      },
+      "createdAt": "2025-12-04T11:05:58.387Z"
+    },
+    {
+      "id": "QkRdkuyotjrsfYeIWLphN",
+      "businessName": "Talukdar pharmacy",
+      "turnover": 5000000,
+      "investment": 1999988,
+      "classification": "Micro",
+      "docs": {
+        "kyc": true,
+        "income": true,
+        "businessProof": true
+      },
+      "decision": {
+        "status": "Ready for Appraisal"
+      },
+      "createdAt": "2025-12-04T11:11:06.356Z"
+    }
+  ]
+}
