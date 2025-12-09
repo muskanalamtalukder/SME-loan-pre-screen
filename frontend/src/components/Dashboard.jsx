@@ -1,73 +1,46 @@
-import React, { useEffect, useState } from 'react';
-import { listApplications } from '../api/api';
-
-function StatusBadge({ status }) {
-  const map = {
-    'Ready for Appraisal': 'green',
-    'Conditional Approval': 'orange',
-    'On Hold': 'yellow',
-    'Rejected': 'red',
-    'Pending': 'gray'
-  };
-  const color = map[status] || 'gray';
-  return <span className={`badge ${color}`}>{status}</span>;
-}
+import React from "react";
 
 export default function Dashboard() {
-  const [apps, setApps] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const rows = [
+    { business: "XYZ Store", class: "Micro", turnover: 200000, investment: 50000, status: "Conditional", reason: "Business proof missing" },
+    { business: "Medical Shop", class: "Micro", turnover: 500000, investment: 100000, status: "Ready", reason: "All documents verified" },
+    { business: "ABC Works", class: "Small", turnover: 2500000, investment: 800000, status: "Rejected", reason: "KYC missing" },
+  ];
 
-  async function fetchApps() {
-    setLoading(true);
-    try {
-      const data = await listApplications();
-      setApps(data.sort((a,b)=> new Date(b.createdAt)-new Date(a.createdAt)));
-    } catch (err) {
-      setApps([]);
-    } finally {
-      setLoading(false);
-    }
+  function statusClass(s) {
+    if (s === "Ready") return "st-ready";
+    if (s === "Conditional") return "st-conditional";
+    return "st-rejected";
   }
 
-  useEffect(() => { fetchApps(); }, []);
-
   return (
-    <section className="card dashboard-card">
-      <h2>Applications</h2>
-
-      {loading ? <div className="empty">Loading…</div> : (
-        apps.length === 0 ? (
-          <div className="empty">No applications yet — submit one on the left.</div>
-        ) : (
-          <div className="table-wrap">
-            <table className="apps-table">
-              <thead>
-                <tr>
-                  <th>Business</th>
-                  <th>Classification</th>
-                  <th>Turnover</th>
-                  <th>Investment</th>
-                  <th>Status</th>
-                  <th>Submitted</th>
-                </tr>
-              </thead>
-              <tbody>
-                {apps.map(a => (
-                  <tr key={a.id}>
-                    <td>{a.businessName}</td>
-                    <td>{a.classification}</td>
-                    <td>{a.turnover.toLocaleString()}</td>
-                    <td>{a.investment.toLocaleString()}</td>
-                    <td><StatusBadge status={a.decision.status} /></td>
-                    <td>{new Date(a.createdAt).toLocaleString()}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )
-      )}
-      <div className="note">Tip: Click an item to view full details (future enhancement).</div>
-    </section>
+    <div>
+      <table className="data-table">
+        <thead>
+          <tr>
+            <th>Business</th>
+            <th>Classification</th>
+            <th>Turnover</th>
+            <th>Investment</th>
+            <th>Status</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r, i) => (
+            <tr key={i}>
+              <td>{r.business}</td>
+              <td>{r.class}</td>
+              <td>{r.turnover.toLocaleString()}</td>
+              <td>{r.investment.toLocaleString()}</td>
+              <td>
+                <span className={`status-pill ${statusClass(r.status)}`}>{r.status}</span>
+              </td>
+              <td className={r.status === "Rejected" ? "reason-reject" : ""}>{r.reason}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles.css";
-import logo from "../assets/hdfc-logo.jpg";
+import logo from "../assets/hdfc-logo.png";
 
 export default function Header() {
   return (

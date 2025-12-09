@@ -1,0 +1,83 @@
+.menu-wrapper { position: relative; display:block; }
+
+/* hamburger button with animated transform */
+.hamburger-button {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  border-radius:8px;
+  transition: background .2s ease;
+}
+.hamburger-button:hover { background: rgba(11,34,75,0.04); }
+
+/* bars */
+.hamburger-button span {
+  width: 24px;
+  height: 3px;
+  background: #0a2342;
+  border-radius:3px;
+  display:block;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+/* open state - transform into X */
+.hamburger-button.open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.hamburger-button.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger-button.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* menu box (hidden by default) */
+.menu-box {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  width: 240px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(11,34,75,0.14);
+  padding: 8px;
+  z-index: 220;
+  transform-origin: top right;
+  transform: translateY(-8px) scale(.95);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .22s cubic-bezier(.2,.9,.2,1), opacity .22s ease;
+}
+
+/* when shown */
+.menu-box.show {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* menu items */
+.menu-item {
+  display:block;
+  width:100%;
+  padding:8px 10px;
+  background:none;
+  border:none;
+  text-align:left;
+  font-weight:600;
+  cursor:pointer;
+  border-radius:8px;
+}
+.menu-item:hover { background:#f1f5ff; }
+.menu-sep { height:1px; background:#eee; margin:8px 0; }
+.logout { color:#c62828; }
+
+/* support area inside menu */
+.support-box { margin-top:8px; font-size:13px; color:#333; padding-top:6px; border-top:1px dashed #f0f3f6; }
+.support-box h4 { margin:0 0 6px; font-size:14px; color:#07203a; }

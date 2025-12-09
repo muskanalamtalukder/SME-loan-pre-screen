@@ -1,30 +1,35 @@
 import React from "react";
-import Header from "./components/Header";
 import ApplicationForm from "./components/ApplicationForm";
 import Dashboard from "./components/Dashboard";
-import "./styles.css";
+import TopRightMenu from "./components/TopRightMenu";
+import logo from "./assets/hdfc-logo.png";
 
 export default function App() {
   return (
-    <div className="app-shell">
-      <Header />
-      <main className="main-area">
-        <div className="left-col">
-          <ApplicationForm />
+    <div className="app-bg">
+      <header className="app-header">
+        <div className="header-center">
+          <img src={logo} alt="HDFC Bank" className="bank-logo" />
+          <div className="title-block">
+            <h1 className="app-title">SME LOAN Pre-Screen</h1>
+            <p className="app-subtitle">Simple pre-screening for SME loan requests</p>
+          </div>
         </div>
-        <aside className="right-col">
+
+        <div className="header-menu">
+          <TopRightMenu />
+        </div>
+      </header>
+
+      <main className="content-area">
+        <section className="card">
+          <ApplicationForm />
+        </section>
+
+        <section className="card">
           <Dashboard />
-        </aside>
+        </section>
       </main>
-
-      <footer className="site-footer">
-        <small>© {new Date().getFullYear()} HDFC - SME RFT Pre-Screen (Prototype)</small>
-      </footer>
-
-      {/* decorative floating shapes */}
-      <div className="float-shape s1" />
-      <div className="float-shape s2" />
-      <div className="float-shape s3" />
     </div>
   );
 }
