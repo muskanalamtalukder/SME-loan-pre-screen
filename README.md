@@ -29,10 +29,13 @@ Features
    cd backend
     run again : npm start
 
-**3.To run fonten**d 
-Start the development server:
+**3.To run fontend**d 
 cd frontend
+
+Start the development server:
+
 npm run dev
+
 Open the link shown in the terminal (usually http://localhost:5173)
 
 
